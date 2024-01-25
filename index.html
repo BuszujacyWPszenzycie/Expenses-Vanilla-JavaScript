@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="https://kit.fontawesome.com/288c8cccc3.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+
+<body>
+
+  <main class="main">
+    <aside class="sidebar">
+      <h1 class="sidebar__title">your expenses</h1>
+      <button class="btn__add sidebar__btn"><i class="fa-solid fa-plus sidebar__btn--icon"></i>Add item</button>
+    </aside>
+
+    <section class="start">
+      <img src="./img/header_picture.png" alt="picture of calculator, piece of paper with pen and pencil and some coins"
+        class="start__img">
+      <h2 class="start__title">No expense selected</h2>
+      <p class="start__subtitle">Select an expense or add a new one</p>
+      <button class="btn__add start__btn">Create new expense</button>
+
+
+      <div class="add">
+
+        <div class="expense__wrapper">
+          <h2 class="expense__title">Add Expense</h2>
+          <label class="expense__label" for="">Invoice number</label>
+          <input class="input expense__input" type="text" name="" id="">
+          <label class="expense__label" for="">Client</label>
+          <input class="input expense__input" type="text" name="" id="">
+          <label class="expense__label">Invoice date</label>
+          <input class="input expense__input" type="date">
+          <label class="expense__label" for="">Description</label>
+          <textarea class="input expense__textarea" type="text"></textarea>
+          <label class="expense__label" for="">Amount</label>
+          <input class="input expense__input" type="number">
+          <div class="expense__buttons">
+            <button class="btn expense__btn expense__btn--cancel">Cancel</button>
+            <button class="btn expense__btn expense__btn--save">Save</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="show">
+        <div class="show__wrapper">
+
+          <h3 class="show__title">temp</h3>
+          <p class="show__date">temp</p>
+          <p class="show__client">temp</p>
+          <p class="show__description">temp</p>
+          <p class="show__amount">temp</p>
+          <button class="show__btn show__btn--delete">Delete</button>
+
+        </div>
+      </div>
+
+    </section>
+
+    <dialog class="dialog">
+      <h2 class="dialog__title">Invalid input</h2>
+      <p class="dialog__information">Please fill in all the boxes</p>
+      <form method="dialog">
+        <button class="dialog__btn">Okey</button>
+      </form>
+    </dialog>
+  </main>
+  <script src="./js/script.js"></script>
+
+</body>
+
+</html>
