@@ -18,6 +18,9 @@
     <aside class="sidebar">
       <h1 class="sidebar__title">your expenses</h1>
       <button class="btn__add sidebar__btn"><i class="fa-solid fa-plus sidebar__btn--icon"></i>Add item</button>
+      <button class="expense__item">FA/12/2024</button>
+      <button class="expense__item">FA/13/2024</button>
+      <button class="expense__item">FA/15/2024</button>
     </aside>
 
     <section class="start">
@@ -50,14 +53,18 @@
       </div>
 
       <div class="show">
-        <div class="show__wrapper">
+        <div class=" show__wrapper">
 
-          <h3 class="show__title">temp</h3>
-          <p class="show__date">temp</p>
-          <p class="show__client">temp</p>
-          <p class="show__description">temp</p>
-          <p class="show__amount">temp</p>
-          <button class="show__btn show__btn--delete">Delete</button>
+          <h3 class="show__title">Invoice number</h3>
+          <input class="show__input show__input--client" value="test client" disabled></input>
+          <input class="show__input show__input--date" value="test date" disabled></input>
+          <input class="show__input show__input--description" value="test description" disabled></input>
+          <input class="show__input show__input--amount" value="test amount" disabled></input>
+          <div class="show__btns--wrapper">
+            <button class="show__btn show__btn--delete">Delete</button>
+            <button class="show__btn show__btn--edit">Edit</button>
+          </div>
+
 
         </div>
       </div>
