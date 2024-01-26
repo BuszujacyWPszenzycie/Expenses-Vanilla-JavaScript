@@ -5,6 +5,7 @@ const saveBtn = document.querySelector('.expense__btn--save')
 const errorDialog = document.querySelector('dialog')
 const allInputs = document.querySelectorAll('.input')
 const sidebar = document.querySelector('.sidebar')
+const sidebarShadow = document.querySelector('.sidebar__shadow')
 const showExpenseModal = document.querySelector('.show')
 const showTitle = document.querySelector('.show__title')
 const showDate = document.querySelector('.show__input--date')
@@ -52,22 +53,20 @@ function showExpenseFunctionInput(e) {
 	allShowInputs.forEach(input => input.setAttribute('value', ''))
 	showTitle.textContent = EXPENSES[index].invoiceNumber
 	console.log(EXPENSES[index].client)
-	// showClient.setAttribute('value', EXPENSES[index].client)
 	showClient.value = EXPENSES[index].client
 	showDate.value = EXPENSES[index].invoiceDate
 	showDescritpion.value = EXPENSES[index].description
 	showAmount.value = EXPENSES[index].amount
-	// showDate.setAttribute('value', EXPENSES[index].invoiceDate)
-	// showDescritpion.setAttribute('value', EXPENSES[index].description)
-	// showAmount.setAttribute('value', EXPENSES[index].amount)
 	showExpenseModal.classList.add('show-expense')
 	editBtn.textContent = 'Edit'
 }
 
 function editExpenseFunction() {
 	allShowInputs.forEach(input => input.removeAttribute('disabled'))
+	const allExpenseItems = document.querySelectorAll('.expense__item')
+	allExpenseItems.forEach(item => item.setAttribute('disabled', ''))
+	sidebarShadow.classList.add('show-shadow')
 	editBtn.textContent = 'Save'
-	console.log(EXPENSES)
 }
 
 function saveExpenseFunciton() {
@@ -77,9 +76,11 @@ function saveExpenseFunciton() {
 	EXPENSES[index].invoiceDate = showDate.value
 	EXPENSES[index].description = showDescritpion.value
 	EXPENSES[index].amount = showAmount.value
-	console.log(EXPENSES)
+	const allExpenseItems = document.querySelectorAll('.expense__item')
+	allExpenseItems.forEach(item => item.removeAttribute('disabled'))
 	editBtn.textContent = 'Edit'
 	allShowInputs.forEach(input => input.setAttribute('disabled', ''))
+	sidebarShadow.classList.remove('show-shadow')
 }
 
 function deleteExpenseFunction() {

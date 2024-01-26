@@ -30,6 +30,19 @@ body {
 	height: 100vh;
 	background-color: $black;
 	border-top-right-radius: 8px;
+	position: relative;
+
+	&__shadow {
+		display: none;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		position: absolute;
+		border-radius: 8px;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: 10;
+	}
 
 	&__title {
 		text-transform: uppercase;
@@ -75,6 +88,10 @@ body {
 			font-size: 3rem;
 		}
 	}
+}
+
+.show-shadow {
+	display: block;
 }
 
 // START PAGE

@@ -28,6 +28,18 @@ body {
   height: 100vh;
   background-color: #3d3b40;
   border-top-right-radius: 8px;
+  position: relative;
+}
+.sidebar__shadow {
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
 }
 .sidebar__title {
   text-transform: uppercase;
@@ -67,6 +79,10 @@ body {
 }
 .sidebar__btn--icon {
   font-size: 3rem;
+}
+
+.show-shadow {
+  display: block;
 }
 
 .start {
