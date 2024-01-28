@@ -93,6 +93,7 @@ function deleteExpenseFunction() {
 	showExpenseModal.classList.remove('show-expense')
 	editBtn.textContent = 'Edit'
 	allShowInputs.forEach(input => input.setAttribute('disabled', ''))
+	sidebarShadow.classList.remove('show-shadow')
 }
 
 function saveFunction() {
